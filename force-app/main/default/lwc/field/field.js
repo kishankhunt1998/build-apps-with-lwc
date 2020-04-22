@@ -22,7 +22,7 @@ export default class Fields extends LightningElement {
   //console.log("start");
   // var phoneno = /^\d{10}$/;
   // if (phone.value.match(phoneno)) {
-  //   return true;
+  //   return true; 
   //   console.log("success");
   // } else {
   //   alert("not valid phone number");
@@ -53,7 +53,7 @@ export default class Fields extends LightningElement {
     fields[Name_FIELD.fieldApiName] = this.name;
     fields[PHONE_FIELD.fieldApiName] = this.phone;
     const recordInput = { apiName: ACCOUNT_OBJECT.objectApiName, fields };
-    //console.log(recordInput);
+    console.log(recordInput);
 
     createRecord(recordInput)
       .then(account => {
@@ -69,7 +69,6 @@ export default class Fields extends LightningElement {
       })
       .catch(error => {
         console.log("fail");
-
         this.dispatchEvent(
           new ShowToastEvent({
             title: "mobile number restrict to 10 digit",

@@ -10,9 +10,9 @@
                 class="slds-m-right_x-small"></lightning-button>
             <lightning-button variant="brand" label="Cancel" varient="brand" onclick={cancelhandler}>
             </lightning-button>
-            <template if:true={Account}>
-                <template for:each={Account} for:item="Account">
-                    <p key={Account.Id}>{Account.Name}</p>
+            <template if:true={Accounts}>
+                <template for:each={Accounts} for:item="Account">
+                    <p key={Account.Id}>{Account.Name},{Account.Phone}</p>
                 </template>
             </template>
         </div>

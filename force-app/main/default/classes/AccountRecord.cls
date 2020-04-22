@@ -11,27 +11,30 @@ public with sharing class AccountRecord {
         return [
                 SELECT Name, Phone 
                 FROM Account 
-                LIMIT 40
                ];
     }
-
-    @AuraEnabled(cacheable=true)
-    public static List<Account> findAccount(String searchKey) {
-        String key = '%' + searchkey + '%';
-        return [
-            SELECT Name, Phone
-            FROM Account
-            Where Name LIKE :key 
-            LIMIT 10
-        ];
-    }
- 
-    @AuraEnabled(cacheable=true)
-    public static List<Account> findsingleAccount(String searchKey) {
-        return [
-            SELECT Name, Phone
-            FROM Account
-            LIMIT 1
-        ];
-    }
 }
+
+
+
+
+//     @AuraEnabled(cacheable=true)
+//     public static List<Account> findAccount(String searchKey) {
+//         String key = '%' + searchkey + '%';
+//         return [
+//             SELECT Name, Phone
+//             FROM Account
+//             Where Name LIKE :key 
+//             LIMIT 10
+//         ];
+//     }
+ 
+//     @AuraEnabled(cacheable=true)
+//     public static List<Account> findsingleAccount(String searchKey) {
+//         return [
+//             SELECT Name, Phone
+//             FROM Account
+//             LIMIT 1
+//         ];
+//     }
+// }
